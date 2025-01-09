@@ -2,11 +2,14 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0)
 from contextlib import suppress
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class SaleOrderLine(models.Model):
     _inherit = "sale.order.line"
+
+    require_packaging = fields.Boolean(compute="_compute_require_packaging")
 
     def onchange(self, values, field_name, field_onchange):
         """Record which field was being changed."""
@@ -43,6 +46,23 @@ class SaleOrderLine(models.Model):
                     and line.product_uom_qty % line.product_packaging_id.qty
                 ):
                     line.product_packaging_id = False
+                    res = line._warning_product_packaging_required()
+                    if res:
+                        return res
+        return result
+
+    @api.depends("product_id", "product_uom_qty", "product_uom")
+    def _warning_product_packaging_required(self):
+        """Notify the user when a packaging is required."""
+        result = {}
+        for line in self:
+            if line.require_packaging and not line.product_packaging_id:
+                raise UserError(
+                    _(
+                        "The product %s requires a packaging to be sold"
+                        % line.product_id.name
+                    )
+                )
         return result
 
     @api.model
@@ -84,3 +104,8 @@ class SaleOrderLine(models.Model):
         _self = self.with_context(keep_product_packaging=True)
         result = super(SaleOrderLine, _self)._compute_product_uom_qty()
         return result
+
+    @api.depends("product_id")
+    def _compute_require_packaging(self):
+        for line in self:
+            line.require_packaging = line.product_id.require_packaging

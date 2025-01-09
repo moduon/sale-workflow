@@ -1,6 +1,7 @@
 # Copyright 2023 Moduon Team S.L.
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0)
 from odoo import fields
+from odoo.exceptions import UserError
 from odoo.tests.common import Form
 
 from odoo.addons.product.tests.common import ProductCommon
@@ -126,3 +127,16 @@ class SalePackagingDefaultCase(ProductCommon):
             self.assertEqual(line_f.product_packaging_id, self.p2_three_pack)
             self.assertEqual(line_f.product_packaging_qty, 10)
             self.assertEqual(line_f.product_uom_qty, 30)
+
+    def test_product_require_packaging(self):
+        """Test that products with the required packaging cannot be sold
+        separated without packaging."""
+        so_f = Form(self.env["sale.order"])
+        so_f.partner_id = self.partner
+        self.product2.require_packaging = True
+        with so_f.order_line.new() as line_f:
+            line_f.product_id = self.product2
+            self.assertTrue(line_f.require_packaging)
+            with self.assertRaises(UserError):
+                line_f.product_uom_qty = 1
+                so_f.save()

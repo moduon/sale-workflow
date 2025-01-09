@@ -15,6 +15,7 @@
     "installable": True,
     "depends": ["sale"],
     "data": [
+        "views/product_template_view.xml",
         "views/sale_order_view.xml",
     ],
 }

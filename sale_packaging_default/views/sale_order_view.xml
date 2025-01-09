@@ -36,6 +36,33 @@
                     position="move"
                 />
             </xpath>
+
+            <xpath
+                expr="//field[@name='order_line']/tree/field[@name='product_packaging_id']"
+                position="before"
+            >
+                <field name="require_packaging" invisible="1" />
+            </xpath>
+
+            <!-- Make packaging mandatory when the product is not allow to divide the packaging -->
+            <xpath
+                expr="//field[@name='order_line']/tree/field[@name='product_packaging_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'required': [('require_packaging', '=', True)]}</attribute>
+            </xpath>
+
+            <!-- Make packaging qty readonly when the product is not allow to divide the packaging -->
+            <xpath
+                expr="//field[@name='order_line']/tree/field[@name='product_packaging_qty']"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'readonly': [('require_packaging', '=', True)]}</attribute>
+            </xpath>
         </field>
     </record>
 </data>
