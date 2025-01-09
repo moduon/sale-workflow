@@ -2,7 +2,8 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0)
 
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class SaleOrderRecommendationLine(models.TransientModel):
@@ -26,6 +27,7 @@ class SaleOrderRecommendationLine(models.TransientModel):
         digits="Product Unit of Measure",
         help="Quantity of packagings to sell.",
     )
+    require_packaging = fields.Boolean(compute="_compute_require_packaging")
 
     @api.depends("product_id", "units_included", "sale_uom_id")
     def _compute_product_packaging(self):
@@ -109,3 +111,22 @@ class SaleOrderRecommendationLine(models.TransientModel):
             # Nothing to create
             return result
         return self._prepare_packaging_line_vals(result)
+
+    @api.depends("product_id")
+    def _compute_require_packaging(self):
+        for line in self:
+            line.require_packaging = line.product_id.require_packaging
+
+    @api.depends("product_id", "product_uom_qty", "product_uom")
+    def _warning_product_packaging_required(self):
+        """Notify the user when a packaging is required."""
+        result = {}
+        for line in self:
+            if line.require_packaging and not line.product_packaging_id:
+                raise UserError(
+                    _(
+                        "The product %s requires a packaging to be sold"
+                        % line.product_id.name
+                    )
+                )
+        return result

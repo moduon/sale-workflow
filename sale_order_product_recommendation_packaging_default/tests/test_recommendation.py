@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0)
 from freezegun import freeze_time
 
+from odoo.exceptions import UserError
 from odoo.fields import Command
 from odoo.tests import tagged
 from odoo.tests.common import Form
@@ -234,3 +235,16 @@ class PackagingRecommendationCase(test_recommendation_common.RecommendationCase)
                 },
             ],
         )
+
+    def test_product_require_packaging(self):
+        """Test that products with the required packaging cannot be sold
+        separated without packaging."""
+        so_f = Form(self.env["sale.order"])
+        so_f.partner_id = self.partner
+        self.prod_1.require_packaging = True
+        with so_f.order_line.new() as line_f:
+            line_f.product_id = self.prod_1
+            self.assertTrue(line_f.require_packaging)
+            with self.assertRaises(UserError):
+                line_f.product_uom_qty = 1
+                so_f.save()

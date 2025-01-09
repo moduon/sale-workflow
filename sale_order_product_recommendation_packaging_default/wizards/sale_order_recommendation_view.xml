@@ -10,6 +10,14 @@
             ref="sale_order_product_recommendation.sale_order_recommendation_view_form"
         />
         <field name="arch" type="xml">
+
+            <xpath
+                expr="//field[@name='line_ids']/form//field[@name='units_included']"
+                position="before"
+            >
+                <field name="require_packaging" invisible="1" />
+            </xpath>
+
             <xpath
                 expr="//field[@name='line_ids']/tree/field[@name='units_included']"
                 position="before"
@@ -36,12 +44,13 @@
                     name="product_packaging_id"
                     groups="product.group_stock_packaging"
                     context="{'default_product_id': product_id}"
+                    attrs="{'required': [('require_packaging', '=', True)]}"
                 />
                 <field
                     name="product_packaging_qty"
                     groups="product.group_stock_packaging"
                     widget="numeric_step"
-                    attrs="{'readonly': [('product_packaging_id', '=', False)]}"
+                    attrs="{'readonly': ['|', ('product_packaging_id', '=', False), ('require_packaging', '=', True)]}"
                 />
             </xpath>
         </field>
