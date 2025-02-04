@@ -13,16 +13,14 @@ class AccountMove(models.Model):
         for move in self:
             sale_order = move.mapped("line_ids.sale_line_ids.order_id")
             if (
-                sale_order
-                and move.invoice_outstanding_credits_debits_widget is not False
+                not sale_order
+                or move.invoice_outstanding_credits_debits_widget is False
             ):
-                json_invoice_outstanding_data = (
-                    move.invoice_outstanding_credits_debits_widget.get("content", [])
-                )
-                for data in json_invoice_outstanding_data:
-                    if (
-                        data.get("move_id")
-                        in sale_order.account_payment_ids.move_id.ids
-                    ):
-                        move.js_assign_outstanding_line(line_id=data.get("id"))
+                continue
+            json_invoice_outstanding_data = (
+                move.invoice_outstanding_credits_debits_widget.get("content", [])
+            )
+            for data in json_invoice_outstanding_data:
+                if data.get("move_id") in sale_order.account_payment_ids.move_id.ids:
+                    move.js_assign_outstanding_line(line_id=data.get("id"))
         return res
