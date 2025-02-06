@@ -66,6 +66,7 @@ addon | version | maintainers | summary
 [sale_product_multi_add](sale_product_multi_add/) | 17.0.1.0.0 |  | Sale Product Multi Add
 [sale_product_set](sale_product_set/) | 17.0.1.0.0 |  | Sale product set
 [sale_quotation_number](sale_quotation_number/) | 17.0.1.1.2 |  | Different sequence for sale quotations
+[sale_readonly_security](sale_readonly_security/) | 17.0.1.0.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Sale Readonly Security
 [sale_shipping_info_helper](sale_shipping_info_helper/) | 17.0.1.0.0 |  | Add shipping amounts on sale order
 [sale_sourced_by_line](sale_sourced_by_line/) | 17.0.1.0.0 |  | Multiple warehouse source locations for Sale order
 [sale_start_end_dates](sale_start_end_dates/) | 17.0.1.0.0 | [![alexis-via](https://github.com/alexis-via.png?size=30px)](https://github.com/alexis-via) | Adds start date and end date on sale order lines
