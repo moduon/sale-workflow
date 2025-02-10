@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2025-02-10 19:06+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: sale_commitment_date_mandatory
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_res_config_settings__commitment_date_required
@@ -45,14 +47,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_sale_order__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: sale_commitment_date_mandatory
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_res_company__id
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_res_config_settings__id
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_sale_order__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: sale_commitment_date_mandatory
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_res_company____last_update
