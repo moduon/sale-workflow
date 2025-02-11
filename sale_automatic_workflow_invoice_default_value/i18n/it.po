@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-02-10 19:06+0000\n"
+"PO-Revision-Date: 2025-02-11 10:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -29,12 +29,12 @@ msgstr ""
 #. module: sale_automatic_workflow_invoice_default_value
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_invoice_default_value__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: sale_automatic_workflow_invoice_default_value
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_invoice_default_value__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: sale_automatic_workflow_invoice_default_value
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_invoice_default_value__default_char_value
@@ -59,7 +59,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_job__id
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_sale_workflow_process__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: sale_automatic_workflow_invoice_default_value
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_invoice_default_value__invoice_field_id
@@ -71,17 +71,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_job____last_update
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_sale_workflow_process____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: sale_automatic_workflow_invoice_default_value
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_invoice_default_value__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: sale_automatic_workflow_invoice_default_value
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_invoice_default_value__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: sale_automatic_workflow_invoice_default_value
 #: model:ir.model.fields,field_description:sale_automatic_workflow_invoice_default_value.field_automatic_workflow_invoice_default_value__process_id
