@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-02-10 19:06+0000\n"
+"PO-Revision-Date: 2025-02-11 10:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -61,7 +61,7 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_res_config_settings____last_update
 #: model:ir.model.fields,field_description:sale_commitment_date_mandatory.field_sale_order____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: sale_commitment_date_mandatory
 #: model_terms:ir.ui.view,arch_db:sale_commitment_date_mandatory.res_config_settings_view_form
@@ -71,7 +71,7 @@ msgstr ""
 #. module: sale_commitment_date_mandatory
 #: model:ir.model,name:sale_commitment_date_mandatory.model_sale_order
 msgid "Sales Order"
-msgstr ""
+msgstr "Ordine di vendita"
 
 #. module: sale_commitment_date_mandatory
 #: model:ir.model.fields,help:sale_commitment_date_mandatory.field_sale_order__commitment_date
