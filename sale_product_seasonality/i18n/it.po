@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-02-10 19:06+0000\n"
+"PO-Revision-Date: 2025-02-11 10:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -37,7 +37,7 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:sale_product_seasonality.field_sale_order____last_update
 #: model:ir.model.fields,field_description:sale_product_seasonality.field_sale_order_line____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: sale_product_seasonality
 #: model:ir.ui.menu,name:sale_product_seasonality.sale_seasonal_config
@@ -57,12 +57,12 @@ msgstr ""
 #. module: sale_product_seasonality
 #: model:ir.model,name:sale_product_seasonality.model_sale_order
 msgid "Sales Order"
-msgstr ""
+msgstr "Ordine di vendita"
 
 #. module: sale_product_seasonality
 #: model:ir.model,name:sale_product_seasonality.model_sale_order_line
 msgid "Sales Order Line"
-msgstr ""
+msgstr "Riga ordine di vendita"
 
 #. module: sale_product_seasonality
 #: model:ir.model.fields,field_description:sale_product_seasonality.field_sale_order__season_allowed_product_ids
