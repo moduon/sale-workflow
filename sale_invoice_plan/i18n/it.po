@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-02-10 19:06+0000\n"
+"PO-Revision-Date: 2025-02-11 10:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -68,14 +68,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_invoice_plan__create_uid
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_make_planned_invoice__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_create_invoice_plan__create_date
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_invoice_plan__create_date
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_make_planned_invoice__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_invoice_plan__partner_id
@@ -114,7 +114,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_make_planned_invoice__id
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_order__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields,help:sale_invoice_plan.field_sale_invoice_plan__invoiced
@@ -198,7 +198,7 @@ msgstr ""
 #. module: sale_invoice_plan
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_invoice_plan__last
 msgid "Last Installment"
-msgstr ""
+msgstr "Ultima rata"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_advance_payment_inv____last_update
@@ -207,26 +207,26 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_make_planned_invoice____last_update
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_order____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_create_invoice_plan__write_uid
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_invoice_plan__write_uid
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_make_planned_invoice__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_create_invoice_plan__write_date
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_invoice_plan__write_date
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_make_planned_invoice__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields,help:sale_invoice_plan.field_sale_invoice_plan__last
 msgid "Last installment will create invoice use remaining amount"
-msgstr ""
+msgstr "L'ultima rata creerà la fattura usando l'ammontare residuo"
 
 #. module: sale_invoice_plan
 #: model:ir.model.fields.selection,name:sale_invoice_plan.selection__sale_create_invoice_plan__interval_type__month
@@ -305,12 +305,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_invoice_plan.field_sale_invoice_plan__sale_id
 #: model_terms:ir.ui.view,arch_db:sale_invoice_plan.view_sale_invoice_plan_filter
 msgid "Sales Order"
-msgstr ""
+msgstr "Ordine di vendita"
 
 #. module: sale_invoice_plan
 #: model_terms:ir.ui.view,arch_db:sale_invoice_plan.view_sale_invoice_plan_filter
 msgid "Sales Orders"
-msgstr ""
+msgstr "Ordini di vendita"
 
 #. module: sale_invoice_plan
 #: model_terms:ir.ui.view,arch_db:sale_invoice_plan.view_sale_invoice_plan_filter
