@@ -40,6 +40,7 @@ setuptools.setup(
         'odoo-addon-sale_invoice_no_mail>=15.0dev,<15.1dev',
         'odoo-addon-sale_invoice_plan>=15.0dev,<15.1dev',
         'odoo-addon-sale_invoice_policy>=15.0dev,<15.1dev',
+        'odoo-addon-sale_isolated_quotation>=15.0dev,<15.1dev',
         'odoo-addon-sale_last_price_info>=15.0dev,<15.1dev',
         'odoo-addon-sale_missing_tracking>=15.0dev,<15.1dev',
         'odoo-addon-sale_missing_tracking_tier_validation>=15.0dev,<15.1dev',
